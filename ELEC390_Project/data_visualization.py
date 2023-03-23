@@ -9,6 +9,9 @@ with h.File('../hdf5_data.h5', 'r') as hdf:
     array1 = np.array(walking_training)
     print(array1)
 
-plt.subplots(nrows=1, ncols=5, sharex=True)
-plt.plot(array1[:,0], array1[:,1])
+fig, (ax1, ax2, ax3, ax4) = plt.subplots(nrows=4,ncols=1)
+ax1.plot(array1[:,0], array1[:,1])
+ax2.plot(array1[:,0], array1[:,2])
+ax3.plot(array1[:,0], array1[:,3])
+ax4.plot(array1[:,0], array1[:,4])
 plt.show()
